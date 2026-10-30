@@ -26,11 +26,9 @@ def get_tier(page):
 
 def count_pages(url):
     headers = {"User-Agent" : "arxiv-cv-search student project"}
-    pdf = requests.get(url, headers=headers, timeout=10).content
+    pdf = requests.get(url, headers=headers, timeout=30).content
     doc = pymupdf.open(stream=pdf, filetype="pdf")
     return doc.page_count
-
-page_counts = []
 
 if "page_count" not in df.columns:
     df["page_count"] = None
@@ -48,8 +46,7 @@ for i in df.index:
     df.loc[i, "page_count"] = pages
     print(i, pages)
 
-    if i % 10 == 0:
-        df.to_csv("data/corpus.csv", index = False)
+    df.to_csv("data/corpus.csv", index = False)
 
     time.sleep(3)
 
