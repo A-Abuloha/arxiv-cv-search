@@ -1,8 +1,3 @@
-"""
-bm25.py
-Scores papers by how well their words match the query.
-"""
-
 import pandas as pd
 import math
 from preprocess import preProcess
@@ -69,7 +64,4 @@ def search(query):
 
     result = sorted(result, reverse = True)
 
-    return result[:10]
-
-for score, i in search("object detection"):
-    print(round(score, 2), corpusDF.loc[i, "title"])
+    return result

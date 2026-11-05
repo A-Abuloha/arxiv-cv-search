@@ -19,7 +19,7 @@ emb = model.encode(documents)
 
 def search(query):
     query_emb = model.encode([query])
-    dense_scores = cosine_similarity(query_embedding, emb)[0]
+    dense_scores = cosine_similarity(query_emb, emb)[0]
     top_10 = dense_scores.argsort()[::-1][:10]
 
     return top_10

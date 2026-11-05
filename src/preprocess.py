@@ -1,8 +1,3 @@
-"""
-preprocess.py
-Cleans text, splits it into words, lowercases, removes stopwords.
-"""
-
 STOPWORDS = {
     # English stopwords plus a few custom scientific stopwords for the papers.
     'a', 'about', 'above', 'after', 'again', 'against', 'ain', 'all', 'am', 'an', 

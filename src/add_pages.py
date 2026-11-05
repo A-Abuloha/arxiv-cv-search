@@ -1,8 +1,3 @@
-"""
-add_pages.py
-Downloads papers, counts pages, adds page_count and length_tier columns to data/corpus.csv
-"""
-
 import pandas as pd
 import requests
 import pymupdf
