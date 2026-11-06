@@ -28,9 +28,9 @@ def hybrid_search(query, top_k=10):
 
     rank = 0
 
-    for idx in dense_results:
+    for index in dense_results:
         rank = rank + 1
-        idx = int(idx)
+        idx = int(index)
 
         if idx not in fusion_scores:
             fusion_scores[idx] = 0.0
