@@ -1,6 +1,3 @@
-
-
-
 ## File Structure:<br><br>
 
 ### README.md
@@ -33,6 +30,9 @@
 ### src/stats.py
 --> Calculates numbers about the corpus for the report.
 
+### src/add_pages.py
+-->  Downloads papers, Counts pages, adds two columns "page_count" and "length_tier"
+
 ### data/corpus.csv
 --> The collection of papers, one row per paper.
 
@@ -41,3 +41,4 @@
 
 ### ai-logs/phase1/index.md
 --> Ai chats, Which tool and what it helped with.
+

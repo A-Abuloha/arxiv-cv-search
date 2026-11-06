@@ -10,7 +10,4 @@ Collected on 25 October 2026 with `src/collect.py` (arXiv API).
 | `cat:cs.CV AND abs:"image generation"` | 104 | Oct 2026 |
 | `cat:cs.CV AND abs:"medical image analysis"` | 103 | Mar – Oct 2026 |
 
-Date ranges come from the arXiv IDs (YYMM = submission year and month).
-
-Page counts come from each paper's PDF (counted with pymupdf in `src/add_pages.py`):
 347 long (10+ pages), 54 medium (7–9), 29 short (6 or fewer). 6-page papers are counted as short.
