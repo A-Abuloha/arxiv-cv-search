@@ -24,6 +24,9 @@ if userQuery:
         resultList = phraseList
 
     resultList = resultList[:10]
+    if not resultList:
+        st.write("No results found.")
+
 
     for score, i in resultList:
         title = bm25.corpusDF.loc[i, "title"]
@@ -32,6 +35,16 @@ if userQuery:
 
         st.markdown(f"### [{title}]({link})")
         st.write(f"Score: {round(score, 2)}")
-        st.write(snippet + "...")
+
+        words = snippet.split()
+        highlighted = []
+        for word in words: 
+            clean = word.lower().strip(".,;:()")
+            if clean in tokens: 
+                highlighted.append("**" + word + "**")
+            else:
+                highlighted.append(word)
+        st.markdown(" ".join(highlighted) + "...")
+
         st.divider()
-        
+
