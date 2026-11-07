@@ -1,6 +1,6 @@
 import sys
 sys.path.append("src")
-import bm25, query
+import bm25, dense, fusion, query
 import streamlit as st
 
 st.title("arXiv Computer Vision Search")
@@ -11,11 +11,26 @@ phraseOnly = st.checkbox("Match exact phrase")
 if userQuery:
     tokens = query.processQuery(userQuery)
     fixedQuery = " ".join(tokens)
-    results = bm25.search(fixedQuery)
-
     resultList = []
-    for score, i in results:
-        if (score > 0): resultList.append((score, i))
+
+    if model == "BM25":
+        results = bm25.search(fixedQuery)
+
+        for score, i in results:
+            if score > 0:
+                resultList.append((score, i))
+
+    elif model == "Dense":
+        results = dense.search(fixedQuery, return_scores=True)
+
+        for score, i in results:
+            resultList.append((score, i))
+
+    elif model == "Fusion":
+        results = fusion.hybrid_search(fixedQuery)
+
+        for i, score in results:
+            resultList.append((score, i))
 
     if phraseOnly:
         phraseList = []
@@ -34,7 +49,7 @@ if userQuery:
         snippet = bm25.corpusDF.loc[i, "abstract"][:200]
 
         st.markdown(f"### [{title}]({link})")
-        st.write(f"Score: {round(score, 2)}")
+        st.write(f"Score: {score:.6f}")
 
         words = snippet.split()
         highlighted = []
