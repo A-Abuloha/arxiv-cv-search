@@ -9,5 +9,5 @@
 | 5 | Gemini | Help with query.py and clarification on some parts | https://gemini.google.com/share/d/1E4-wxqkULaYidcVDko_9C7gP9sframdC?usp=sharing |
 | 6 | Gemini | Help to get a list of what we need for the stats to make the report| https://gemini.google.com/share/d/1YobCvO5ntb1H4krX98t0U3BUW8TnlZeB?usp=sharing |
 | 7 | ChatGpt | Help with fusion.py and getting the RRF formula| [https://chatgpt.com/share/6aee4dd1-d908-83eb-a187-dc757e3eaabe|
-| 8 | ChatGpt | Help with dense.py| [https://chatgpt.com/share/6aef8e83-2dec-83ed-9f4b-1191ec4ae57a|
+| 8 | ChatGpt | Help with dense.py| [https://chatgpt.com/share/6aef9069-c660-83eb-8ad1-85da82f84729|
 
