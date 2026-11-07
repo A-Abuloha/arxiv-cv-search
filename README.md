@@ -1,3 +1,26 @@
+# arXiv Computer vision Search Engine
+
+A search engine for 430 computer vision papers from arxiv, Built as part of a course's main project, It supports BM25, dense retrival and fusion of both, with spelling correction, abbreviations expansion, case-insensitive search and phrase matching.
+
+## Team 5
+
+## Corpus
+- Category: cs.CV (Computer Vision)
+- 430 papers across 4 sup-topics: object detection, image segementation, image generation, medical image analysis
+- Length tier: short (<= 6), medium (7-9), long (>= 10)
+- Collection details: 'data/collection_log.md'
+- statistics report: 'reports/corpus_statistics.pdf'
+
+## Setup
+```
+pip install -r requirements.txt
+```
+
+## Run
+```
+streamlit run app.py
+```
+
 ## File Structure:<br><br>
 
 ### README.md

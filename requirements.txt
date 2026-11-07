@@ -1,0 +1,7 @@
+arxiv
+pandas
+requests
+pymupdf
+sentence-transformers
+scikit-learn
+streamlit

@@ -27,7 +27,7 @@ if userQuery:
             resultList.append((score, i))
 
     elif model == "Fusion":
-        results = fusion.hybrid_search(fixedQuery)
+        results = fusion.hybrid_search(fixedQuery, top_k=len(bm25.corpusDF))
 
         for i, score in results:
             resultList.append((score, i))
