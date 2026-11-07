@@ -23,7 +23,7 @@ emb = model.encode(documents)
 def search(query, return_scores=False):     
     query_emb = model.encode([query])
     dense_scores = cosine_similarity(query_emb, emb)[0]
-    top_10 = dense_scores.argsort()
+    top_10 = dense_scores.argsort()[::-1]
 
     if return_scores:
         results = []
